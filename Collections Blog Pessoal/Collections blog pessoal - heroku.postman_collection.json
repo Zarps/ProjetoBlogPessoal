@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "4749c865-ecd7-49a4-86bd-6d3f96df3af1",
+		"name": "Collections blog pessoal / heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar usuario 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"wesley rios\",\r\n    \"usuario\": \"wes.rios@gmail.com\",\r\n    \"senha\": \"123456\",\r\n    \"foto\": \"Null\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bloghistory.herokuapp.com/usuarios/cadastrar",
+					"protocol": "https",
+					"host": [
+						"bloghistory",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"usuarios",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logando no usuario 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"wes.rios@gmail.com\",\r\n    \"senha\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bloghistory.herokuapp.com/usuarios/logar",
+					"protocol": "https",
+					"host": [
+						"bloghistory",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"usuarios",
+						"logar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inserindo temas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic d2VzLnJpb3NAZ21haWwuY29tOjEyMzQ1Ng==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descricao\": \"Contos de Terror curtos\"\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bloghistory.herokuapp.com/temas",
+					"protocol": "https",
+					"host": [
+						"bloghistory",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"temas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserindo segundo tema",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic d2VzLnJpb3NAZ21haWwuY29tOjEyMzQ1Ng==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\": \"Contos de terror amador\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bloghistory.herokuapp.com/temas",
+					"protocol": "https",
+					"host": [
+						"bloghistory",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"temas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar todos os usuarios",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic d2VzLnJpb3NAZ21haWwuY29tOjEyMzQ1Ng==",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://bloghistory.herokuapp.com/usuarios/listar",
+					"protocol": "https",
+					"host": [
+						"bloghistory",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"usuarios",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inserindo postagem",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic d2VzLnJpb3NAZ21haWwuY29tOjEyMzQ1Ng==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Bilhete\",\r\n  \"texto\": \"Encontrei um bilhete da minha mãe na mesa da cozinha quando cheguei em casa. Dizia que ela estaria de volta às 21:30, mas eu tinha acabado de chegar do seu funeral.\",\r\n  \"data\": \"2021-12-19\",\r\n  \"tema\": {\r\n    \"id\": 1\r\n  }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bloghistory.herokuapp.com/postagens",
+					"protocol": "https",
+					"host": [
+						"bloghistory",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"postagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "puxando todos os temas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic d2VzLnJpb3NAZ21haWwuY29tOjEyMzQ1Ng==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bloghistory.herokuapp.com/postagens",
+					"protocol": "https",
+					"host": [
+						"bloghistory",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"postagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inserindo postagem 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic d2VzLnJpb3NAZ21haWwuY29tOjEyMzQ1Ng==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"retrato\",\r\n  \"texto\": \"Sempre que alguém da minha família morre, penduramos seu retrato em cima da lareira. Hoje, quando cheguei em casa, me deparei com o meu.\",\r\n  \"data\": \"2021-12-19\",\r\n  \"tema\": {\r\n    \"id\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"id\": 1\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bloghistory.herokuapp.com/postagens",
+					"protocol": "https",
+					"host": [
+						"bloghistory",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"postagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserindo postagem 3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic d2VzLnJpb3NAZ21haWwuY29tOjEyMzQ1Ng==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"despertador\",\r\n  \"texto\": \"A última coisa que eu vi foi meu despertador tocando ás 00:07 antes das longas unhas podres empurrarem meu peito e uma outra mão tampar minha boca para eu não poder gritar. Me levantei rapidamente e me senti aliviada por ser apenas um sonho, mas quando olhei para meu despertador eram 00:06 e ouvi a porta do meu armário se abrir.\",\r\n  \"data\": \"2021-12-19\",\r\n  \"tema\": {\r\n    \"id\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"id\": 1\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bloghistory.herokuapp.com/postagens",
+					"protocol": "https",
+					"host": [
+						"bloghistory",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"postagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inserindo postagem 4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic d2VzLnJpb3NAZ21haWwuY29tOjEyMzQ1Ng==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Amiga imaginária\",\r\n  \"texto\": \"Ontem meus pais me falaram que eu estava muito velho para ter uma amiga imaginária e me disseram para deixá-la ir. Eles encontraram o corpo dela essa manhã.\",\r\n  \"data\": \"2021-12-19\",\r\n  \"tema\": {\r\n    \"id\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"id\": 2\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bloghistory.herokuapp.com/postagens",
+					"protocol": "https",
+					"host": [
+						"bloghistory",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"postagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserindo postagem 5",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic d2VzLnJpb3NAZ21haWwuY29tOjEyMzQ1Ng==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Arranhões\",\r\n  \"texto\": \"Cresci com gatos e cachorros, então me acostumei com o som de arranhões na porta enquanto eu dormia. Agora que eu moro sozinho esses sons que ainda escuto são muito mais inquietantes.\",\r\n  \"data\": \"2021-12-19\",\r\n  \"tema\": {\r\n    \"id\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"id\": 2\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bloghistory.herokuapp.com/postagens",
+					"protocol": "https",
+					"host": [
+						"bloghistory",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"postagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inserindo postagem 6",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic d2VzLnJpb3NAZ21haWwuY29tOjEyMzQ1Ng==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Martelo\",\r\n  \"texto\": \" Eu estava tendo um sonho tranquilo, quando um som de martelo me acordou. Depois disso, só lembro dos meus gritos sendo abafados pelo barulho da terra, que cobria meu caixão.\",\r\n  \"data\": \"2021-12-19\",\r\n  \"tema\": {\r\n    \"id\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"id\": 2\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bloghistory.herokuapp.com/postagens",
+					"protocol": "https",
+					"host": [
+						"bloghistory",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"postagens"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
