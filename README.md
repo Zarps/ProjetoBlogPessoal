@@ -6,6 +6,5 @@
 ### Em desenvolvimento
 
 <div>
-link do swagger: https://bloghistory.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/
-link do heroku: https://dashboard.heroku.com/apps/bloghistory
+link do swagger e heroku: https://bloghistory.herokuapp.com/
 <div>
