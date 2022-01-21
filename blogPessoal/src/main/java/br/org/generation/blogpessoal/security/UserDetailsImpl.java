@@ -20,7 +20,7 @@ public class UserDetailsImpl implements UserDetails {
 		this.password = usuario.getSenha();
 	}
 
-	public UserDetailsImpl() {
+	public  UserDetailsImpl() {
 	}
 
 	@Override

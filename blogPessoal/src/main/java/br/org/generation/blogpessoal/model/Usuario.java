@@ -30,7 +30,7 @@ public class Usuario {
 	private String nome;
 
 	@Schema(example = "email@email.com.br")
-	@NotNull(message = "O atributo Usuário é Obrigatório!")
+	@NotBlank(message = "O atributo Usuário é Obrigatório!")
 	@Email(message = "O atributo Usuário deve ser um email válido!")
 	private String usuario;
 
@@ -39,6 +39,8 @@ public class Usuario {
 	private String senha;
 
 	private String foto;
+	
+	private String tipo;
 	
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
@@ -92,6 +94,14 @@ public class Usuario {
 
 	public void setFoto(String foto) {
 		this.foto = foto;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 
 	public List<Postagem> getPostagem() {
